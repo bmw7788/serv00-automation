@@ -20,7 +20,7 @@ def ssh_multiple_connections(hosts_info, command):
             users.append(user)
             hostnames.append(hostname)
             cmd = 'cd ~/domains/alist && ~/.npm-global/bin/pm2 start ./alist -- server'
-            stdin, stdout, stderr = ssh.exec_command(command)
+            stdin, stdout, stderr = ssh.exec_command(cmd)
             ssh.close()
         except Exception as e:
             print(f"用户：{username}，连接 {hostname} 时出错: {str(e)}")

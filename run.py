@@ -29,3 +29,4 @@ hosts_info = json.loads(ssh_info_str)
 
 command = 'cd ~/domains/alist;pm2 start ./alist -- server'
 user_list, hostname_list = ssh_multiple_connections(hosts_info, command)
+print("推送成功")

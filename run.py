@@ -27,5 +27,5 @@ def ssh_multiple_connections(hosts_info, command):
 ssh_info_str = os.getenv('SSH_INFO', '[]')
 hosts_info = json.loads(ssh_info_str)
 
-command = 'cd ~/domains/alist;pm2 ./alist -- server'
+command = 'cd ~/domains/alist;pm2 start ./alist -- server'
 user_list, hostname_list = ssh_multiple_connections(hosts_info, command)
